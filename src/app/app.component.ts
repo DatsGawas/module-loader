@@ -35,7 +35,7 @@ this.data = {
   }
 
   addModule() {
-      System.import(this.data.url).then((module) => {
+      System.import('./profile.module.js').then((module) => {
         this._compiler.compileModuleAndAllComponentsAsync(module[this.data.className])
           .then((compiled) => {
             const factory = compiled.componentFactories[0];
